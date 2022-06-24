@@ -20,4 +20,11 @@ public class Author {
 
     @ManyToMany(mappedBy = "authors" , cascade = CascadeType.ALL)
     Set<Book>books = new HashSet<Book>();
+
+//    extra constructor
+
+    public Author(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
 }

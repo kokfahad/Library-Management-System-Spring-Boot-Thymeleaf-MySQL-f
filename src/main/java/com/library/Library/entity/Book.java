@@ -35,6 +35,15 @@ public class Book {
             joinColumns = {@JoinColumn(name = "book_id")}, inverseJoinColumns = {@JoinColumn(name = "publisher_id")})
     private Set<Publisher>publishers = new HashSet<Publisher>();
 
+    //extra constructors
+
+    public Book(String isbn, String name, String description) {
+        this.isbn = isbn;
+        this.name = name;
+        this.description = description;
+    }
+
+
     //for publisher
 
     public void removePublisher(Publisher publisher){

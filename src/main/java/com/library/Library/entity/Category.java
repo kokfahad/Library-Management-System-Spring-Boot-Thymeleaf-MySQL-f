@@ -19,4 +19,10 @@ public class Category {
     @ManyToMany(mappedBy = "categories" , cascade = CascadeType.ALL)
     Set<Book> books = new HashSet<Book>();
 
+    //extra constructors
+
+
+    public Category(String name) {
+        this.name = name;
+    }
 }

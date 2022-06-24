@@ -18,4 +18,10 @@ public class Publisher {
 
     @ManyToMany(mappedBy = "publishers" , cascade = CascadeType.ALL)
     Set<Book> books = new HashSet<Book>();
+
+//    extra constructors
+
+    public Publisher(String name) {
+        this.name = name;
+    }
 }
